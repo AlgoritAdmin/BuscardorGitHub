@@ -19,11 +19,11 @@ class SearchProvider extends ChangeNotifier {
   Future<void> getPerson() async {
     isLoading = true;
     notifyListeners();
-    await Future.delayed(Duration(seconds: 3));
+    await Future.delayed(Duration(seconds: 1));
 
     final url = Uri.https(_baseUrl, '/users/${this.typing}');
     final response = await http.get(url, headers: {
-      'Authorization': 'token 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',
+      'Authorization': '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',
     });
     final responseDecoded = UserGit.fromJson(response.body);
     user = responseDecoded;
@@ -36,7 +36,7 @@ class SearchProvider extends ChangeNotifier {
 
     final url = Uri.https(_baseUrl, '/users/${this.typing}');
     final response = await http.get(url, headers: {
-      'Authorization': 'token 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',
+      'Authorization': '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',
     });
 
     final responseDecoded = UserGit.fromJson(response.body);
