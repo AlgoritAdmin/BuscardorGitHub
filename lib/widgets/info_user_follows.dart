@@ -63,16 +63,16 @@ class Boxi extends StatelessWidget {
     required this.size,
     required this.darkMode,
   }) : super(key: key);
-
+  //widget info repos, followers y following
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          this.title,
+          title,
           style: TextStyle(
-            fontSize: this.size * 0.015,
+            fontSize: size * 0.015,
             color: darkMode ? Color.fromARGB(167, 255, 255, 255) : null,
           ),
         ),
@@ -80,9 +80,9 @@ class Boxi extends StatelessWidget {
           height: size * 0.005,
         ),
         Text(
-          this.subTitle,
+          subTitle,
           style: TextStyle(
-            fontSize: this.size * 0.03,
+            fontSize: size * 0.03,
             fontWeight: FontWeight.bold,
             color: darkMode ? Color.fromARGB(167, 255, 255, 255) : null,
           ),

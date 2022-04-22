@@ -5,7 +5,7 @@ import 'package:reto_dev_algorit/providers/search_provider.dart';
 
 class SearchBar extends StatelessWidget {
   const SearchBar({Key? key}) : super(key: key);
-
+  //widget to search bar
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
@@ -16,7 +16,7 @@ class SearchBar extends StatelessWidget {
       margin: EdgeInsets.symmetric(horizontal: size.height * 0.01),
       width: double.infinity,
       decoration: BoxDecoration(
-        color: Color.fromRGBO(75, 106, 155, 0.5),
+        color: const Color.fromRGBO(75, 106, 155, 0.5),
         borderRadius: BorderRadius.circular(size.height * 0.015),
       ),
       child: TextField(

@@ -16,12 +16,13 @@ class SearchProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  //function to get users
   Future<void> getPerson() async {
     isLoading = true;
     notifyListeners();
-    await Future.delayed(Duration(seconds: 1));
+    await Future.delayed(const Duration(seconds: 1));
 
-    final url = Uri.https(_baseUrl, '/users/${this.typing}');
+    final url = Uri.https(_baseUrl, '/users/$typing');
     final response = await http.get(url, headers: {
       'Authorization': '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',
     });
@@ -31,10 +32,11 @@ class SearchProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  //function to get default users
   Future<bool> getDefaultPerson() async {
     //await Future.delayed(Duration(seconds: 3));
 
-    final url = Uri.https(_baseUrl, '/users/${this.typing}');
+    final url = Uri.https(_baseUrl, '/users/$typing');
     final response = await http.get(url, headers: {
       'Authorization': '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',
     });

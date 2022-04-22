@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 final ThemeData themeDataLight = ThemeData.light().copyWith(
-  //
-  scaffoldBackgroundColor: Color.fromARGB(255, 15, 21, 36),
+  scaffoldBackgroundColor: const Color.fromARGB(255, 15, 21, 36),
 
   //
   textTheme: TextTheme(

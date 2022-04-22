@@ -8,7 +8,7 @@ class DarkModeWidget extends StatelessWidget {
   }) : super(key: key);
 
   final SearchProvider searchProvider;
-
+  //widget to dark mode
   @override
   Widget build(BuildContext context) {
     return SwitchListTile(

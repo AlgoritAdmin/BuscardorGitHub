@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:reto_dev_algorit/providers/get_first_person.dart';
 import 'package:reto_dev_algorit/providers/search_provider.dart';
 import 'package:reto_dev_algorit/screens/screens.dart';
 import 'package:reto_dev_algorit/themes/theme_data.dart';
@@ -18,12 +17,14 @@ class AppState extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => SearchProvider(), lazy: false),
       ],
-      child: MyApp(),
+      child: const MyApp(),
     );
   }
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final searchProvider = Provider.of<SearchProvider>(context);

@@ -5,7 +5,7 @@ import 'package:reto_dev_algorit/widgets/widgets.dart';
 
 class UserCard extends StatelessWidget {
   const UserCard({Key? key}) : super(key: key);
-
+  //default widget
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
@@ -22,7 +22,7 @@ class UserCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8.0),
             child: PhotoProfile(
               photo: searchProvider.user.avatarUrl,
             ),

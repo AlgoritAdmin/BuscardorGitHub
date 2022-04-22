@@ -3,12 +3,12 @@
 import 'package:flutter/material.dart';
 import 'package:reto_dev_algorit/models/user_git.dart';
 import 'package:reto_dev_algorit/widgets/widgets.dart';
-import 'package:url_launcher/url_launcher.dart' as launcherUrl;
+import 'package:url_launcher/url_launcher.dart' as launcher_url;
 
 class InfoUser extends StatelessWidget {
   final UserGit user;
-  InfoUser({Key? key, required this.user}) : super(key: key);
-
+  const InfoUser({Key? key, required this.user}) : super(key: key);
+  //widget to show info user
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size.height;
@@ -120,6 +120,7 @@ class Contact extends StatelessWidget {
         SizedBox(width: 10),
         GestureDetector(
           onTap: () => launchUrl(text),
+          // ignore: sized_box_for_whitespace
           child: Container(
             width: size / 0.013 * 0.22,
             child: Text(
@@ -133,9 +134,10 @@ class Contact extends StatelessWidget {
     );
   }
 
+  //laucnh url
   void launchUrl(String text) async {
-    if (await launcherUrl.canLaunch(text)) {
-      await launcherUrl.launch(text);
+    if (await launcher_url.canLaunch(text)) {
+      await launcher_url.launch(text);
     }
   }
 }
